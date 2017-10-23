@@ -1,4 +1,4 @@
-<?php
+<?php 
  
 namespace App\Http\Controllers;
 
@@ -24,7 +24,18 @@ class JualanController extends Controller
         $jualans = Jualan::paginate(3);
         return view('jualan.index',compact('jualans'));
     }
-
+    public function search(Request $request)
+    {
+        $jualanquery = $request->get('search');
+        $jualans = Jualan::where('id','=','%'.$jualanquery)
+        ->orWhere('id','LIKE','%'.$jualanquery.'%')
+        ->orWhere('buku_id','LIKE','%'.$jualanquery.'%')
+        ->orWhere('users_id','LIKE','%'.$jualanquery.'%')
+        ->orWhere('jumlah','LIKE','%'.$jualanquery.'%')
+        ->orWhere('total','LIKE','%'.$jualanquery.'%')
+        ->paginate(5);
+        return view('jualan.index', compact(['jualanquery', $jualanquery], ['jualans', $jualans]));
+    }
     /**
      * Show the form for creating a new resource.
      *

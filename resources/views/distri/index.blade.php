@@ -1,8 +1,23 @@
 @if(Auth::user()->jabatan == 'Admin')
 @extends('layouts.app1')
-
+ 
 @section('content')
-<div class="container">
+
+     <div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                {!! Form::open(['method'=>'GET','url'=>'distriquery','role'=>'search']) !!}
+                    <div class="input-group custom-search-from">
+                        <input type="text" class="form-control" name="search" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i> Cari</button>
+                        </span>
+                    </span>
+                </div>
+                    {!! Form::close() !!}
+
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">

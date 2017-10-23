@@ -12,9 +12,11 @@ class ComposerStaticInit6e31b3c73c2bffafd0cbfa42551fdfec
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -95,6 +97,7 @@ class ComposerStaticInit6e31b3c73c2bffafd0cbfa42551fdfec
         'C' => 
         array (
             'Cron\\' => 5,
+            'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
         ),
         'A' => 
@@ -250,6 +253,10 @@ class ComposerStaticInit6e31b3c73c2bffafd0cbfa42551fdfec
         array (
             0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
         ),
+        'Collective\\Html\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -331,6 +338,13 @@ class ComposerStaticInit6e31b3c73c2bffafd0cbfa42551fdfec
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/DayOfMonthField.php',
@@ -344,6 +358,7 @@ class ComposerStaticInit6e31b3c73c2bffafd0cbfa42551fdfec
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
+        'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineCollectionFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineCollectionFilter.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineEmptyCollectionFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineEmptyCollectionFilter.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineProxyFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineProxyFilter.php',
@@ -357,9 +372,11 @@ class ComposerStaticInit6e31b3c73c2bffafd0cbfa42551fdfec
         'DeepCopy\\Matcher\\PropertyNameMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Matcher/PropertyNameMatcher.php',
         'DeepCopy\\Matcher\\PropertyTypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Matcher/PropertyTypeMatcher.php',
         'DeepCopy\\Reflection\\ReflectionHelper' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Reflection/ReflectionHelper.php',
+        'DeepCopy\\TypeFilter\\Date\\DateIntervalFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Date/DateIntervalFilter.php',
         'DeepCopy\\TypeFilter\\ReplaceFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/ReplaceFilter.php',
         'DeepCopy\\TypeFilter\\ShallowCopyFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/ShallowCopyFilter.php',
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedList' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedList.php',
+        'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
         'DeepCopy\\TypeMatcher\\TypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
         'Doctrine\\Common\\Inflector\\Inflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php',
@@ -2694,6 +2711,7 @@ class ComposerStaticInit6e31b3c73c2bffafd0cbfa42551fdfec
         'Psy\\Command\\Command' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/Command.php',
         'Psy\\Command\\DocCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/DocCommand.php',
         'Psy\\Command\\DumpCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/DumpCommand.php',
+        'Psy\\Command\\EditCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/EditCommand.php',
         'Psy\\Command\\ExitCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/ExitCommand.php',
         'Psy\\Command\\HelpCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/HelpCommand.php',
         'Psy\\Command\\HistoryCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/HistoryCommand.php',
@@ -2761,17 +2779,21 @@ class ComposerStaticInit6e31b3c73c2bffafd0cbfa42551fdfec
         'Psy\\Sudo\\SudoVisitor' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Sudo/SudoVisitor.php',
         'Psy\\TabCompletion\\AutoCompleter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/AutoCompleter.php',
         'Psy\\TabCompletion\\Matcher\\AbstractContextAwareMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/AbstractContextAwareMatcher.php',
+        'Psy\\TabCompletion\\Matcher\\AbstractDefaultParametersMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/AbstractDefaultParametersMatcher.php',
         'Psy\\TabCompletion\\Matcher\\AbstractMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/AbstractMatcher.php',
         'Psy\\TabCompletion\\Matcher\\ClassAttributesMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/ClassAttributesMatcher.php',
+        'Psy\\TabCompletion\\Matcher\\ClassMethodDefaultParametersMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/ClassMethodDefaultParametersMatcher.php',
         'Psy\\TabCompletion\\Matcher\\ClassMethodsMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/ClassMethodsMatcher.php',
         'Psy\\TabCompletion\\Matcher\\ClassNamesMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/ClassNamesMatcher.php',
         'Psy\\TabCompletion\\Matcher\\CommandsMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/CommandsMatcher.php',
         'Psy\\TabCompletion\\Matcher\\ConstantsMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/ConstantsMatcher.php',
+        'Psy\\TabCompletion\\Matcher\\FunctionDefaultParametersMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/FunctionDefaultParametersMatcher.php',
         'Psy\\TabCompletion\\Matcher\\FunctionsMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/FunctionsMatcher.php',
         'Psy\\TabCompletion\\Matcher\\KeywordsMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/KeywordsMatcher.php',
         'Psy\\TabCompletion\\Matcher\\MongoClientMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/MongoClientMatcher.php',
         'Psy\\TabCompletion\\Matcher\\MongoDatabaseMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/MongoDatabaseMatcher.php',
         'Psy\\TabCompletion\\Matcher\\ObjectAttributesMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/ObjectAttributesMatcher.php',
+        'Psy\\TabCompletion\\Matcher\\ObjectMethodDefaultParametersMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/ObjectMethodDefaultParametersMatcher.php',
         'Psy\\TabCompletion\\Matcher\\ObjectMethodsMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/ObjectMethodsMatcher.php',
         'Psy\\TabCompletion\\Matcher\\VariablesMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/VariablesMatcher.php',
         'Psy\\Util\\Docblock' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Util/Docblock.php',

@@ -1,5 +1,5 @@
 <?php
-
+ 
 namespace App\Http\Controllers;
  
 
@@ -27,6 +27,18 @@ class PasokController extends Controller
         return view('pasok.index',compact('pasoks'));
     }
     
+    public function search(Request $request)
+    {
+        $pasokquery = $request->get('search');
+        $pasoks = Pasok::where('id','=','%'.$pasokquery)
+        ->orWhere('id','LIKE','%'.$pasokquery.'%')
+        ->orWhere('distri_id','LIKE','%'.$pasokquery.'%')
+        ->orWhere('buku_id','LIKE','%'.$pasokquery.'%')
+        ->orWhere('jumlah','LIKE','%'.$pasokquery.'%')
+        ->orWhere('tanggal','LIKE','%'.$pasokquery.'%')
+        ->paginate(5);
+        return view('pasok.index', compact(['pasokquery', $pasokquery], ['pasoks', $pasoks]));
+    }
 
     /**
      * Show the form for creating a new resource.

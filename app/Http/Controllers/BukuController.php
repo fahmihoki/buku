@@ -1,5 +1,5 @@
 <?php
- 
+  
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -22,7 +22,24 @@ class BukuController extends Controller
        $bukus = Buku::paginate(1);
         return view('buku.index',compact('bukus'));
     }
+public function search(Request $request)
+    {
+        $bukuquery = $request->get('search');
+        $bukus = Buku::where('id','=','%'.$bukuquery)
+        ->orWhere('id','LIKE','%'.$bukuquery.'%')
+        ->orWhere('judul','LIKE','%'.$bukuquery.'%')
+        ->orWhere('noisbn','LIKE','%'.$bukuquery.'%')
+        ->orWhere('penulis','LIKE','%'.$bukuquery.'%')
+        ->orWhere('penerbit','LIKE','%'.$bukuquery.'%')
+        ->orWhere('stok','LIKE','%'.$bukuquery.'%')
+        ->orWhere('harga_pokok','LIKE','%'.$bukuquery.'%')
+        ->orWhere('harga_jual','LIKE','%'.$bukuquery.'%')
+        ->orWhere('ppn','LIKE','%'.$bukuquery.'%')
+         ->orWhere('diskon','LIKE','%'.$bukuquery.'%')
 
+        ->paginate(5);
+        return view('buku.index', compact(['bukuquery', $bukuquery], ['bukus', $bukus]));
+    }
     /**
      * Show the form for creating a new resource.
      *

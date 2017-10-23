@@ -1,5 +1,5 @@
 <?php
-
+ 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,8 +27,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('bukuquery', 'BukuController@search');
 
-Route::get('distriquery', 'DistriController@search');
-
 Route::get('pasokquery', 'PasokController@search');
 
 Route::get('jualanquery', 'JualanController@search');
+
+Route::get('distriquery', 'DistriController@search');

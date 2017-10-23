@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Http\Controllers;
 
@@ -23,6 +23,18 @@ class DistriController extends Controller
          $distris = DB::table('distri')->paginate(3);
 
         return view('distri.index', ['distris' => $distris]);
+    }
+
+     public function search(Request $request)
+    {
+        $distriquery = $request->get('search');
+        $distris = Distri::where('id','=','%'.$distriquery)
+        ->orWhere('id','LIKE','%'.$distriquery.'%')
+        ->orWhere('nama_distri','LIKE','%'.$distriquery.'%')
+        ->orWhere('alamat','LIKE','%'.$distriquery.'%')
+        ->orWhere('telepon','LIKE','%'.$distriquery.'%')
+        ->paginate(5);
+        return view('distri.index', compact(['distriquery', $distriquery], ['distris', $distris]));
     }
 
     /**
